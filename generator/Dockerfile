@@ -15,4 +15,4 @@ COPY . .
 
 # 6. Run the web server using Gunicorn.
 # Includes a robust port fallback so it executes seamlessly locally or on any cloud platform.
-CMD exec gunicorn --bind :${PORT:-8080} --workers 1 --threads 8 --timeout 0 app:app
+CMD exec gunicorn --bind :${PORT:-8080} --workers 1 --threads 1 --timeout 0 app:app
